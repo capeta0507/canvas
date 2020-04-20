@@ -4,7 +4,7 @@ var ctx = c.getContext("2d");
 var i;
 
 v.addEventListener("play", function() {
-    i = window.setInterval(function() {ctx.drawImage(v,5,5,720,405)},20);
+    i = window.setInterval(function() {ctx.drawImage(v,0,0,800,450)},20);
 }, false);
 v.addEventListener("pause", function() {window.clearInterval(i);}, false);
 v.addEventListener("ended", function() {clearInterval(i);}, false); 
