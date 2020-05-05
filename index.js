@@ -19,22 +19,33 @@ v.addEventListener("timeupdate", function(){
     console.log(v.currentTime);
     if(timeDisplay == 4){
         $('.myPhoto').css('display', 'block');
-        setTimeout(() => {
-            $('.square').css('display', 'block');
-            setTimeout(() => {
-                $('.square').css('display', 'none');
-            },3000)
-        },3000)
-        setTimeout(() => {
-            $('.myPhoto').css('display', 'none');
-        },3000)
+    }
+    if(timeDisplay > 7){
+        $('.myPhoto').css('display', 'none');
+    }
+    if(timeDisplay == 3){
+        $('.square').css('display', 'block');
+    }
+    if(timeDisplay > 9){
+        $('.square').css('display', 'none');
     }
 
 })
 
 // 取得控制video的button
-document.querySelector('button')
+document.querySelector('#myPlay')
     .addEventListener('click', event => {
         // v.paused == false ? v.pause() : v.play()
         v.play();
+        $("#myPlay").hide();
+        $("#myPause").show();
     })
+
+    // 取得控制video的button
+document.querySelector('#myPause')
+.addEventListener('click', event => {
+    v.pause();
+    // v.play();
+    $("#myPause").hide();
+    $("#myPlay").show();
+})
