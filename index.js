@@ -17,19 +17,18 @@ v.addEventListener("timeupdate", function(){
     timeDisplay = Math.floor(v.currentTime);
     console.log(Math.floor(v.currentTime));
     console.log(v.currentTime);
-    if(timeDisplay == 4){
+    if(v.currentTime > 5){
         $('.myPhoto').css('display', 'block');
     }
-    if(timeDisplay > 7){
+    if(v.currentTime > 6.5){
         $('.myPhoto').css('display', 'none');
     }
-    if(timeDisplay == 3){
-        $('.square').css('display', 'block');
-    }
-    if(timeDisplay > 9){
-        $('.square').css('display', 'none');
-    }
 
+})
+
+v.addEventListener("ended",function(){
+    $("#myPause").hide();
+    $("#myPlay").show();
 })
 
 // 取得控制video的button

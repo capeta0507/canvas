@@ -30,13 +30,14 @@
     display: none;
   }
   .myPhoto{
-    width: 100px;
+    width: 120px;
     height: auto;
     position: absolute;
     top: 50%;
-    margin-top: -20%;
-    right: 20%;
+    margin-top: -8%;
+    right: 40%;
     z-index: 5;
+    transform: rotate(-2deg);
     display: none;
   }
   .myPhoto > img{
@@ -48,12 +49,11 @@
     <p>Video to use:</p>
     <!-- autoplay -->
     <video id="myVideo" controls width="480">
-      <source src="Kaguya-sama.mp4" type='video/mp4'>
+      <source src="0505_kingFree.mp4" type='video/mp4'>
     </video>
     <p>Canvas (the code draws the current frame of the video every 20 millisecond):</p>
     <div class="getpos">
       <canvas id="myCanvas" width="800" height="450" style="border:1px solid #d3d3d3;"></canvas>
-      <div class="square"></div>
       <div class="myPhoto">
         <img src="/A1010332.jpg" alt="">
       </div>
