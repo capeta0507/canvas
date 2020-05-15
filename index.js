@@ -1,8 +1,9 @@
 var v = document.getElementById("myVideo");
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+var myImg = document.getElementById('myImg');
 var i;
-
+// video
 v.addEventListener("play", function() {
     i = window.setInterval(function() {ctx.drawImage(v,0,0,800,450)},20);
 }, false);
@@ -19,6 +20,8 @@ v.addEventListener("timeupdate", function(){
     console.log(v.currentTime);
     if(v.currentTime > 5){
         $('.myPhoto').css('display', 'block');
+        // photo
+        // ctx.drawImage(myImg, 5,5)
     }
     if(v.currentTime > 6.5){
         $('.myPhoto').css('display', 'none');
